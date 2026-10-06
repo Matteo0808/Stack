@@ -1,2 +1,0 @@
-Hello! StackDump is working!
-stack_t stk (located at 00000002997FFBB0) created by main at stack.cpp:4086841369
