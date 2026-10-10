@@ -2,7 +2,7 @@
 
 Hello, GitHub! Here is my Data Structure Stack!
 
-It's my realisation of Stack, based on principle LIFO(Last in first out).
+It's my implementation of Stack, based on LIFO (Last in first out) principle.
 
 This repository contains the code for a program that ensures stack's work and contains canonical stack functions.
 
@@ -40,7 +40,7 @@ Don't worry, if the number of elements exceeds capacity, **"StackPush"** will au
 
 3. If you want to get an element from your stack, you need to use function **"StackPop"**
 ```c++
-    ssize_t elem;
+    ssize_t elem = 666;
     StackPop(stk, &elem);
 ``` 
 If the number of elements is 4 times less than capacity, **"StackPop"** will automatically resize capacity 2 times less.
@@ -70,7 +70,7 @@ If stack is ok, **"StackVerify"** returns 0, so you can check it this way:
 **"StackVerify"** calls **"StackCheckErrors"** that returns error code.
 And if there is at least 1 error, **"StackVerify"** calls **"StackDump"**.
 
-Ofcourse **"StackVerify"** is in every function, before and after the body of function.
+Of course **"StackVerify"** is in every function, before and after the body of function.
 
 
 5. If you want to take all information about stack, you need to use **"StackDump"**
@@ -78,10 +78,12 @@ Ofcourse **"StackVerify"** is in every function, before and after the body of fu
     StackDump(stk);
 ```
 
+
 6. If you want to show your stack status, you need to use **"StackPrintf"**
 ```c++
     StackPrintf(stk);
 ```
+
 
 7. In the end, you need to destroy your stack with function **"StackDestructor"**
 ```c++
@@ -93,12 +95,13 @@ Ofcourse **"StackVerify"** is in every function, before and after the body of fu
 
 1. StackConstructor allocate memory for stack. So it's possible to reallocate array.
 2. Maximal level of protection:
-    1. struct declarated after main, so you can't directly accessed a structure field.
+    1. struct declared after main, so you can't directly accessed a structure field.
     2. canary protection, so you can register attack from left or from right.
     3. hash protection, it counts the control sum by algorithm DJB.
-3. Every function has a wrapper, becouse every function without th wrapper has call file, call function and call line in arguments. 
-4. Every function print a message in console if there is an error, and full stack info in log file
-5. Super puper code style\)
+3. Every protection mode can be turned on or turned off by **\#define**. It is implemented by conditional compilation
+4. Every function has a wrapper, because every function without th wrapper has call file, call function and call line in arguments. 
+5. Every function print a message in console if there is an error, and full stack info in log file
+6. Super puper code style\)
 
 
 
