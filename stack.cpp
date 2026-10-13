@@ -1,3 +1,6 @@
+#ifndef STACK_H
+#define STACK_H
+
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
@@ -892,3 +895,5 @@ void _StackPrintf(const stack_t *stk, const char *callFile, const char *callFunc
 
     return;
 }
+
+#endif
